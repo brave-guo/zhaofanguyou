@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 625%; 
+}
+body{
+    font-size: .15rem;
+}
+header{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+header .bg{
+    width: 100%;
+    vertical-align: top;
+}
+header .mine-my{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: start;
+}
+header .mine-my li{
+    margin:.1rem;
+}
+header .mine-my li a{
+    text-decoration: none;
+    color: white;
+}
+header .mine-my li img{
+    width: 0.17rem;
+}
+header div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    display: flex;
+    flex-direction: column;
+}
+header div img{
+    width: .7rem;
+}
+header div .login{
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 0.06rem 0.2rem;
+    margin: .1rem auto;
+}
+article{
+    width: 100%;
+}
+article .mine-at{
+   list-style: none;
+} 
+article .mine-at li{ 
+    width: 86%;
+    height: .5rem;
+    position: relative;
+    margin: 0 auto;
+    padding-left: .25rem;
+    border-bottom: 1px solid #ccc;
+}
+article .mine-at a{
+    text-decoration: none;
+}
+article .mine-at .mine-icon{
+    width: 0.2rem;
+    position: absolute;
+    top: 0.16rem;
+    left: 0rem;
+}
+article .mine-at p{
+    display: inline-block;
+    line-height: 0.5rem;
+}
+article .mine-at .mine-right{
+    width: .08rem;
+    float: right;
+    margin: .18rem .08rem 0 0;
+}
