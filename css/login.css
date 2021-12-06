@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 625%;
+}
+body{
+    font-size: .16rem;   
+    background-color: #F5F5F5;
+    /* font-family: 'MS UI Gothic'; */
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+.login-path{
+    width: 100%;
+    height: 0.4rem;
+    border-bottom: .02rem solid #ccc;
+}
+.login-path p{
+    line-height: 0.4rem;
+    text-indent: .2rem;
+}
+.login-path .login-home{
+    font-weight: bold;
+}
+nav{
+    width: 100%;
+}
+nav .login-nav{
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav .login-nav li{
+    width: 49.9%;
+    line-height: 0.5rem;
+    border-bottom: .04rem solid #ccc;
+}
+nav .login-nav li:nth-of-type(1){
+    font-weight: bold;
+    border-bottom: .04rem solid #FF8A00;
+}
+article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    /* display: none; */
+}
+article input{
+    width: 100%;
+    height: 0.45rem;
+    border: none;
+    outline-style: none;
+    padding-left: .2rem;
+    border-bottom: .015rem solid #ccc;
+}
+article .login-error{
+    font-size: .14rem;
+    color: #808080;
+    position: relative;
+    overflow: hidden;
+    padding-left: .2rem;
+    margin-left: .2rem;
+    line-height: 0.3rem;
+}
+article .loginP{
+    display: none;
+}
+article .login-error img{
+    width: 0.2rem;
+    position: absolute;
+    top: .05rem;
+    left: 0;
+}
+article .loginPw{
+    display: none;
+}
+article button{
+    width: 90%;
+    height: 0.5rem;
+    margin: .2rem auto;
+    font-size: .2rem;
+    color: white;
+    border: none;
+    background-color: #FF8A00;
+}
+article .login-box1{
+    padding: 0 .2rem;
+    display: flex;
+    justify-content: space-between;
+}
+article .login-box1 .login-in{
+     color: #FF8A00;
+}
+article .login-box1 .login-forget{
+    color: #808080;
+}
+.login-code2{
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: none;
+    text-align: center;
+}
+.login-code2 input{
+    width: 100%;
+    height: 0.45rem;
+    border: none;
+    outline-style: none;
+    padding-left: .2rem;
+    border-bottom: .015rem solid #ccc;
+}
+.login-code2 .login-code{
+    display: inline-block;
+    width: .8rem;
+    color: #808080;
+    line-height: 0.3rem;
+    font-size: .14rem;
+    text-align: center;
+    position: absolute;
+    top: .08rem;
+    right: .2rem;
+    border: .01rem solid #ccc;
+}
+.login-code2 .login-error{
+    font-size: .14rem;
+    color: #808080;
+    position: relative;
+    overflow: hidden;
+    padding-left: .2rem;
+    margin-left: .2rem;
+    line-height: 0.3rem;
+}
+.login-code2 .login-error img{
+    width: 0.2rem;
+    position: absolute;
+    top: .05rem;
+    left: 0;
+}
+.login-code2 .loginP{
+    display: none;
+}
+.login-code2 .loginPy{
+    display: none;
+}
+.login-code2 button{
+    width: 90%;
+    height: 0.5rem;
+    margin: .2rem auto;
+    font-size: .2rem;
+    color: white;
+    border: none;
+    background-color: #FF8A00;
+}
+.login-code2 .login-box1{
+    padding: 0 .2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.login-code2 .login-box1 .login-in{
+     color: #FF8A00;
+}
+.login-code2 .login-box1 .login-forget{
+    /* float: right; */
+    color: #808080;
+}
