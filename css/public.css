@@ -2,3 +2,83 @@
     margin: 0;
     padding: 0;
 }
+html{
+    font-size: 100px;
+}
+body{
+    background: #f5f5f5;
+    font-size: 0.12rem;
+}
+/* todo 头部样式 */
+header{
+    width: 100%;
+    height: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255,138,0);
+}
+header h1{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header h1 img{
+    width: 1.1rem;
+    margin-left: .4rem;
+}
+header div{
+    width: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: .3rem;
+}
+header div img{
+    width: 0.23rem;
+    height: 0.29rem;
+    margin-left: 0.2rem;
+}
+
+/* todo 尾部样式 */
+footer{
+    width: 100%;
+    /* height: ; */
+    color:#939494;
+    background-color:#2f3130;
+    padding: 0 0.2rem;
+    padding-bottom: 0.2rem;
+    box-sizing: border-box;
+}
+footer h2{
+    height: .5rem;
+    line-height: .5rem;
+    font-size: .16rem;
+    border-bottom: 1px solid #484949;
+}
+footer ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.2rem auto;
+}
+footer ul li{
+    display: flex;
+    align-items: center;
+}
+footer ul li img{
+    width: 0.2rem;
+    height: 0.23rem;
+}
+
+footer ul li div{
+    font-size: 0.14rem;
+    margin-left: 0.2rem;
+    text-align: center;
+}
+footer div{
+    /* margin: 0.2rem; */
+    text-align: center;
+}
+
