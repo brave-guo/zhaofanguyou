@@ -1,7 +1,7 @@
 /* todo 搜索框部分 */
 .banner{
     width: 100%;
-    height: 2.65rem;
+    height: 2.6rem;
     background: url(../src/index/banner.png) no-repeat;
     background-size: 100%;
     position: relative;
@@ -20,4 +20,30 @@
     background: url(../src/index/seach.jpg) no-repeat 0.1rem 50%;
     background-size: 0.2rem;
     background-color: white;
+}
+/* todo  二手房 租房列表*/
+.home{
+    width: 100%;
+    height: 1.3rem;
+    background-color: rgb(255,138,0);
+    display: flex;
+    justify-content: space-evenly;
+}
+.home li{
+    width: 0.7rem;
+    height: 1.3rem;
+    text-align: center;
+}
+.home li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1.3rem;
+    color: white;
+    font-size: 0.14rem;
+}
+.home li a img{
+    width: 0.65rem;
+    margin-bottom: 0.1rem;
 }
