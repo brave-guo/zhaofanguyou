@@ -1,0 +1,127 @@
+.first{
+    width: 100%;
+    height: 0.4rem;
+    background-color: white;
+    line-height: 0.4rem;
+    font-size: 0.16rem;
+    color: rgb(80, 79, 79);
+}
+.first>span:nth-of-type(1){
+    margin-left: 0.2rem;
+    font-weight: bold;
+}
+
+.search{
+    width: 100%;
+    height: 0.7rem;
+    background-size: 100%;
+    position: relative;
+}
+
+.search>input{
+    width: 80%;
+    height: 0.4rem;
+    text-indent: 0.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 0.11rem;
+    background-size: 0.2rem;
+    background-color: white;
+}
+
+.search img{
+    width: 0.2rem;
+    position: absolute;
+    top: 38%;
+    right: 15%;
+    border-left: 2px solid #ccc;
+    padding-left: 0.1rem;
+}
+
+/* todo title部分 */
+.title{
+    width: 100%;
+    height: 0.5rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(112, 111, 111);
+}
+.title h3{
+    font-size: 0.18rem;
+}
+.title>li{
+    position: relative;
+}
+.title span{
+    border-top: 5px solid #ccc;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    top: 0.06rem;
+    right: -0.1rem;
+}
+
+
+/* todo 热门房源ul部分 */
+#esf ul{
+    width: 100%;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+#esf li{
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+#esf li>img{
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0.1rem;
+}
+#esf li h3{
+    font-size: 0.18rem;
+}
+#esf li>div{
+    width: 2.1rem;
+    line-height: 0.25rem;
+}
+#esf li>div>p{
+    display: flex;
+    justify-content: space-between;
+}
+
+#esf .acreage{
+    font-size: 0.14rem;
+}
+#esf .hot_address>span:nth-of-type(2){
+    color: rgb(255,138,0);
+    font-weight: bold;
+}
+#esf .hot_address{
+    font-size: 0.13rem;
+    color: rgb(150, 147, 147);
+}
+#esf .hot_spe{
+    margin-top: 0.1rem;
+    font-size: 0.14rem;
+    display: flex;
+    color: rgb(255,138,0);
+    justify-content: space-between;
+}
+#esf .hot_spe span:nth-of-type(1){
+    padding: 0.01rem 0.05rem;
+    border-radius: 3px;
+    border: 2px solid rgb(101, 182, 76);
+    color:rgb(101, 182, 76) ;
+}

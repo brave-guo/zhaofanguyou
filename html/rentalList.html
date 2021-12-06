@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>二手房列表</title>
+    <title>租房列表</title>
     <!-- 头部公用样式 -->
     <link rel="stylesheet" href="../css/public.css">
     <!-- 二手房列表所有样式 -->
-    <link rel="stylesheet" href="../css/secondHandList.css">
+    <link rel="stylesheet" href="../css/rentalList.css">
 
     <!-- 调节字体大小js -->
     <script src="../js/mine.js"></script>
@@ -31,9 +31,14 @@
                 <img src="../src/index/xiazai.jpg" alt="">
             </div>
         </header>
+        <!--todo head头部 -->
+        <p class="first"> 
+            <span>首页</span>
+            <span>> 北京租房</span>
+        </p>
         <!--todo 搜索框 -->
         <div class="search">
-            <input type="text" placeholder="输入小区或商圈名开始找房">
+            <input type="text">
             <a href="#">
                 <img src="../src/index/seach.jpg" alt="">
             </a>
@@ -61,19 +66,21 @@
         <!-- todo 列表部分 -->
         <ul id="esf">
             <!-- todo 只截取数据的前三条0,1,2  (0,3)从0开始不包括3 -->
-            <li v-for="(item, index) of lis.slice(0,3)">
+            <li v-for="(item, index) of lis.slice(0,6)">
                 <img :src="item.imgurl" alt="">
                 <div>
                     <h3>{{item.title}}</h3>
                     <p class="acreage">
                         <span>{{item.style}}</span>
                     </p>
-                    <p class="hot_address">
-                        <span>签约价格：{{item.unit_price}}</span>
+                    <p class="acreage">
+                        <span>{{item.address}}</span>
                         <span>{{item.price}}</span>
                     </p>
                     <p class="hot_spe">
-                        <span>签约日期：{{item.data}}</span>
+                        <span>{{item.label[0]}}</span>
+                        <span>{{item.unit_price}}</span>
+
                     </p>
                 </div>
             </li>
@@ -106,6 +113,6 @@
     </div>
 </body>
 <!-- 引入获取数据的js -->
-<script src="../js/secondHandList.js"></script>
+<script src="../js/rentalList.js"></script>
 
 </html>
