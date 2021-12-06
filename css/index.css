@@ -47,3 +47,162 @@
     width: 0.65rem;
     margin-bottom: 0.1rem;
 }
+
+/* todo new图片部分 */
+.banner2{
+    width: 100%;
+    height: 3.2rem;
+    padding: 0.1rem 0;
+    box-sizing: border-box;
+}
+.banner2>img{
+    width: 100%;
+}
+
+/* todo 热门房源title部分 */
+.hot_title{
+    width: 100%;
+    height: 0.7rem;
+    background-color: rgb(255,138,0);
+    color: white;
+    padding-top: 0.08rem;
+    box-sizing: border-box;
+}
+.hot_title>p{
+    font-size: 0.2rem;
+    font-weight: bold;
+    margin-left: 0.3rem;
+}
+.hot_title>p:nth-of-type(2){
+    margin-top: 0.05rem;
+    font-size: 0.12rem;
+}
+
+/* todo 热门房源ul部分 */
+#app ul{
+    width: 100%;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+#app li{
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+#app li>img{
+    width: 1rem;
+   margin-left: 0.1rem;
+}
+#app li h3{
+    font-size: 0.18rem;
+}
+#app li>div{
+    width: 2.1rem;
+    line-height: 0.3rem;
+}
+#app li>div>p{
+    display: flex;
+    justify-content: space-between;
+}
+#app li>div>p:nth-of-type(3){
+    justify-content: flex-start;
+}
+#app .acreage{
+    font-size: 0.14rem;
+}
+#app .acreage>span:nth-of-type(2){
+    color: rgb(255,138,0);
+    font-weight: bold;
+}
+#app .hot_address{
+    font-size: 0.13rem;
+    color: rgb(150, 147, 147);
+}
+#app .hot_spe{
+    font-size: 0.12rem;
+    color: rgb(148, 175, 180);
+}
+#app .hot_spe span{
+    height: 0.2rem;
+    line-height: 0.2rem;
+    margin-right: 0.1rem;
+    background-color: rgb(239, 241, 241);
+    padding: 0.02rem 0.05rem;
+    border-radius: 5px;
+}
+
+/* todo 热门关注&友情链接 */
+
+.hot_attention,.link{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.hot_attention{
+    margin-top: 0.1rem;
+    justify-content: center;
+}
+.hot_attention>li{
+    width: 49%;
+    color: rgb(255,138,0);
+    text-align: center;
+    font-size: 0.18rem;
+    border-bottom:5px solid rgb(255,138,0);
+    padding: 0.2rem 0;
+}
+.hot_attention>li:nth-of-type(2){
+    color: rgb(107, 105, 105);
+    border-bottom:1px solid rgb(255,138,0);
+
+}
+.link>li{
+    width: 1.1rem;
+    height: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: rgb(122, 119, 119);
+    padding: 0.2rem 0;
+    font-size: 0.14rem;
+}
+
+/* todo 下载透明层 */
+.fix{
+    width: 100%;
+    height: 0.6rem;
+    background-color: rgba(75, 74, 74, 0.425);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.18rem;
+    color: white;
+}
+.fix #close{
+    position: absolute;
+    top: 0;
+}
+.fix .fix_logo{
+    width: 0.35rem;
+    height: 0.35rem;
+    margin-left: 0.2rem;
+}
+.fix>div{
+    width: 2rem;
+    font-size: 0.16rem;
+}
+.fix>p{
+    width: 1rem;
+    height: 0.6rem;
+    background-color: rgb(255,138,0);
+    text-align: center;
+    line-height: 0.6rem;
+}
+
+

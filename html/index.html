@@ -7,11 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
     <!-- 头部公用样式 -->
-    <link rel="stylesheet" href="../css/public.css"> 
+    <link rel="stylesheet" href="../css/public.css">
     <!-- 搜索框用样式 -->
-    <link rel="stylesheet" href="../css/index.css"> 
-    
-    
+    <link rel="stylesheet" href="../css/index.css">
+
+
+    <!-- 调节字体大小js -->
+    <script src="../js/mine.js"></script>
+    <!-- 引入vue.js -->
+    <script src="../js/vue.js"></script>
+    <!-- 引入axios.js -->
+    <script src="../js/axios.min.js"></script>
 </head>
 
 <body>
@@ -57,6 +63,69 @@
             </a>
         </li>
     </ul>
+    <!-- todo new图片部分 -->
+    <div class="banner2">
+        <img src="../src/index/banner2.png" alt="">
+    </div>
+    <!-- todo 热门房源title部分 -->
+    <div id="app">
+        <div class="hot_title">
+            <p>热门房源</p>
+            <p>Hot house</p>
+        </div>
+        <ul>
+            <!-- todo 只截取数据的前三条0,1,2  (0,3)从0开始不包括3 -->
+            <li v-for="(item, index) of lis.slice(0,3)">
+                <img :src="item.imgurl" alt="">
+                <div>
+                    <h3>{{item.title}}</h3>
+                    <p class="acreage">
+                        <span>{{item.style}}</span>
+                        <span>{{item.price}}</span>
+                    </p>
+                    <p class="hot_address">
+                        <span>{{item.address}}</span>
+                        <span>{{item.unit_price}}</span>
+                    </p>
+                    <p class="hot_spe">
+                        <span>{{item.label[0]}}</span>
+                        <span>{{item.label[1]}}</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <!--todo 下载透明层 -->
+        <div class="fix" v-show="isShow">
+            <img src="../src/index/close.png" id="close" @click="close">
+            <img src="../src/index/download.png" class="fix_logo">
+            <div>
+                <p>找房无忧</p>
+                <p>市场行情，一手掌握！</p>
+            </div>
+            <p>免费下载</p>
+        </div>
+    </div>
+    <!-- todo 热门关注&友情链接 -->
+    <ul class="hot_attention">
+        <li>热门关注</li>
+        <li>友情链接</li>
+    </ul>
+    <ul class="link">
+        <li>
+            <span>北京二手房</span>
+            <span>北京二手房价</span>
+            <span>海淀日租房</span>
+            <span>朝阳新房</span>
+        </li>
+        <li>
+            <span>北京找房无忧</span>
+            <span>青年家园</span>
+            <span>免税房源</span>
+            <span>满五年唯一免税</span>
+        </li>
+    </ul>
+
     <!--todo 尾部 -->
     <footer>
         <h2>北京找房无忧 > 首页</h2>
@@ -82,6 +151,8 @@
         </div>
     </footer>
 </body>
-<!-- 调节字体大小js -->
-<script src="../js/mine.js"></script>
+
+<!-- 引入获取数据的js -->
+<script src="../js/index.js"></script>
+
 </html>
