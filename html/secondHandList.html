@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <!-- 头部公用样式 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <!-- 二手房列表所有样式 -->
+    <link rel="stylesheet" href="../css/secondHandList.css">
+
+    <!-- 调节字体大小js -->
+    <script src="../js/mine.js"></script>
+    <!-- 引入vue.js -->
+    <script src="../js/vue.js"></script>
+    <!-- 引入axios.js -->
+    <script src="../js/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--todo 头部 -->
+        <header>
+            <h1>
+                <img src="../src/index/logo.jpg" alt="">
+            </h1>
+            <div>
+                <img src="../src/index/my.jpg" alt="">
+                <img src="../src/index/xiazai.jpg" alt="">
+            </div>
+        </header>
+        <!--todo 搜索框 -->
+        <div class="search">
+            <input type="text" placeholder="输入小区或商圈名开始找房">
+            <a href="#">
+                <img src="../src/index/seach.jpg" alt="">
+            </a>
+        </div>
+        <!--todo title部分 -->
+        <ul class="title">
+            <li>
+                <h3>区域</h3>
+                <span></span>
+            </li>
+            <li>
+                <h3>价格</h3>
+                <span></span>
+            </li>
+            <li>
+                <h3>房型</h3>
+                <span></span>
+            </li>
+            <li>
+                <h3>更多</h3>
+                <span></span>
+            </li>
+        </ul>
+
+        <!-- todo 列表部分 -->
+        <ul id="esf">
+            <!-- todo 只截取数据的前三条0,1,2  (0,3)从0开始不包括3 -->
+            <li v-for="(item, index) of lis.slice(0,3)">
+                <img :src="item.imgurl" alt="">
+                <div>
+                    <h3>{{item.title}}</h3>
+                    <p class="acreage">
+                        <span>{{item.style}}</span>
+                    </p>
+                    <p class="hot_address">
+                        <span>签约价格：{{item.unit_price}}</span>
+                        <span>{{item.price}}</span>
+                    </p>
+                    <p class="hot_spe">
+                        <span>签约日期：{{item.data}}</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <!--todo 尾部 -->
+    <footer>
+        <h2>北京找房无忧 > 首页</h2>
+        <ul>
+            <li>
+                <img src="../src/index/apple.png" alt="">
+                <div>
+                    <p>iPhone</p>
+                    <p>客户端</p>
+                </div>
+            </li>
+            <li>
+                <img src="../src/index/android.png" alt="">
+                <div>
+                    <p>Android</p>
+                    <p>客户端</p>
+                </div>
+            </li>
+        </ul>
+        <div>
+            <p>北京找房无忧房地产经纪公司</p>
+            <p>网络经营许可证京ICP备20160812号</p>
+        </div>
+    </footer>
+    </div>
+</body>
+<!-- 引入获取数据的js -->
+<script src="../js/secondHandList.js"></script>
+
+</html>
