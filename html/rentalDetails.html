@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二手房详情页</title>
+    <!-- 头部公用样式 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <!-- 二手房列表所有样式 -->
+    <link rel="stylesheet" href="../css/rentalDetails.css">
+
+    <!-- 调节字体大小js -->
+    <script src="../js/mine.js"></script>
+    <!-- 引入vue.js -->
+    <script src="../js/vue.js"></script>
+    <!-- 引入axios.js -->
+    <script src="../js/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--todo 头部 -->
+        <header>
+            <h1>
+                <img src="../src/index/logo.jpg" alt="">
+            </h1>
+            <div>
+                <img src="../src/index/my.jpg" alt="">
+                <img src="../src/index/xiazai.jpg" alt="">
+            </div>
+        </header>
+        <!-- 首页大图 -->
+        <div class="swip">
+            <span>1/5</span>
+        </div>
+        <!-- 大标题 -->
+        <div class=pic_title>
+            <h3>天鹅湾小区精装两居，满五唯一，业主换房急售</h3>
+            <div>
+                <span>576</span>
+                <span>万元 (单价：46327元/平)</span>
+            </div>
+            <span>挂牌时间2015年6月20日</span>
+            <p>
+                <span>学区房</span><span>独家</span><span>满五唯一</span>
+            </p>
+        </div>
+
+        <!-- 房源详细信息列表 -->
+        <ul class="lis">
+            <li>
+                <p>户型：3室2厅</p>
+                <p>面积：100平</p>
+            </li>
+            <li>
+                <p>楼层：中楼层</p>
+                <p>朝向：西南</p>
+            </li>
+            <li>
+                <p>装修：精装</p>
+                <p>楼型：塔楼</p>
+            </li>
+            <li>
+                <p>年代：2004年</p>
+                <p>区域：西二旗</p>
+            </li>
+            <li>
+                <p>首付：123万</p>
+                <p>月供：15683元</p>
+            </li>
+            <li>地铁：离西二旗地铁站800米</li>
+            <li>小区：珠江帝景</li>
+            <li>学校：北京市第二实验小学</li>
+            <li>更多房源信息</li>
+        </ul>
+
+        <!-- 房源特色 -->
+        <div class="special">
+            <h2>房源特色</h2>
+            <span>小区环境优雅，虽处闹市中（小区南200米有美廉美超市、西30米有华联商场、星美国际影城、东北角就是大中电器、 小区东100米有汇佳幼儿园、昌平实验一小，昆泰国际大酒...</span>
+            <p>更多特色</p>
+
+        </div>
+
+        <!-- 户型分间 -->
+        <div class="type">
+            <h2>户型分间</h2>
+            <ul class="type_ul">
+                <li>
+                    <img src="../src/SecondHandList/img5.png" alt="">
+                    <div>
+                        <h3>当前格局</h3>
+                        <span>分间信息：客厅25平米，南北通透</span>
+                        <div>
+                            <span>南北通透</span>
+                            <span>全明格局</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../src/SecondHandList/img6.png" alt="">
+                    <div>
+                        <h3>当前格局</h3>
+                        <span>分间信息：客厅25平米，南北通透</span>
+                        <div>
+                            <span>南北通透</span>
+                            <span>全明格局</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 对口学校 -->
+        <ul class="lis">
+            <li>
+                <h3>对口学校</h3>
+            </li>
+            <li>
+                <span>学校名称：</span>
+                <span>北京市第二实验小学</span>
+            </li>
+            <li>
+                <span>升学方式：</span>
+                <span>直升、派位</span>
+            </li>
+            <li>
+                <span>对口中学：</span>
+                <span>团结湖中学</span>
+            </li>
+            <li>
+                <span>划片小区：</span>
+                <span>3个划片小区 在售房源150套</span>
+            </li>
+            <li>
+                <span>学校特色：</span>
+                <span>包食宿、有校车</span>
+            </li>
+            <li>查看学校详情</li>
+        </ul>
+        <!-- 位置地图 -->
+        <div class="map">
+            <h3>位置及周边</h3>
+            <div>
+                <img src="../src/SecondHandList/map.png" alt="">
+            </div>
+        </div>
+
+        <!-- todo 列表部分 -->
+        <ul id="list">
+            <!-- todo 只截取数据的前三条2,3,4  (2,4)从2开始不包括3 -->
+            <h3 class="title_li">推荐房源</h3>
+            <li v-for="(item, index) of lis.slice(2,4)">
+                <img :src="item.imgurl" alt="">
+                <div>
+                    <h3>{{item.title}}</h3>
+                    <p class="acreage">
+                        <span>{{item.style}}</span>
+                        <span>{{item.price}}</span>
+                    </p>
+                    <p class="hot_address">
+                        <span>{{item.address}}</span>
+                        <span>{{item.unit_price}}</span>
+                    </p>
+                    <p class="hot_spe">
+                        <span>{{item.label[0]}}</span>
+                    </p>
+                </div>
+            </li>
+            <p>查看更多相似房源</p>
+        </ul>
+
+        <!--todo 尾部 -->
+        <footer>
+            <h2>北京找房无忧 > 首页</h2>
+            <ul>
+                <li>
+                    <img src="../src/index/apple.png" alt="">
+                    <div>
+                        <p>iPhone</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="../src/index/android.png" alt="">
+                    <div>
+                        <p>Android</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <p>北京找房无忧房地产经纪公司</p>
+                <p>网络经营许可证京ICP备20160812号</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<!-- 引入获取数据的js -->
+<script src="../js/index.js"></script>
+
+</html>
