@@ -2,7 +2,7 @@ var vm = new Vue({
     el: '#app',
         data: { 
             lis:[],
-            // todo  关闭下载广告
+            //todo  关闭下载广告
             isShow:true,
             pic_url:'../src/rentalList/xin_n.png',
         },
@@ -12,7 +12,6 @@ var vm = new Vue({
                     params:{}
                 }).then(res=>{
                     this.lis = res.data;
-                    // console.log(this.lis);
                 })
             },
             close(){
