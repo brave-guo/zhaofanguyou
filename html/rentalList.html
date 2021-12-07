@@ -24,16 +24,16 @@
         <!--todo 头部 -->
         <header>
             <h1>
-                <img src="../src/index/logo.jpg" alt="">
+                <img src="../src/index/logo.jpg" onclick="index()" >
             </h1>
             <div>
-                <img src="../src/index/my.jpg" alt="">
+                <img src="../src/index/my.jpg" onclick="log()" >
                 <img src="../src/index/xiazai.jpg" alt="">
             </div>
         </header>
         <!--todo head头部 -->
         <p class="first"> 
-            <span>首页</span>
+            <span onclick="index()">首页</span>
             <span>> 北京租房</span>
         </p>
         <!--todo 搜索框 -->
@@ -66,7 +66,7 @@
         <!-- todo 列表部分 -->
         <ul id="esf">
             <!-- todo 只截取数据的前三条0,1,2  (0,3)从0开始不包括3 -->
-            <li v-for="(item, index) of lis.slice(0,6)">
+            <li v-for="(item, index) of lis.slice(0,6)" @click="jump()">
                 <img :src="item.imgurl" alt="">
                 <div>
                     <h3>{{item.title}}</h3>
@@ -88,7 +88,7 @@
 
         <!--todo 尾部 -->
     <footer>
-        <h2>北京找房无忧 > 首页</h2>
+        <h2>北京找房无忧 > 租房列表页</h2>
         <ul>
             <li>
                 <img src="../src/index/apple.png" alt="">

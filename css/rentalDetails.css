@@ -24,9 +24,12 @@
     width: 19%;
     text-align: center;
     display: flex;
-    align-items: flex-end;
-    background: url(../src/rentalList/xin_n.png) no-repeat 50% 20%;
-    background-size: 0.22rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.gz p img{
+    width: 0.22rem;
 }
 .gz a{
     width: 100%;

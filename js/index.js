@@ -3,7 +3,8 @@ var vm = new Vue({
         data: { 
             lis:[],
             // todo  关闭下载广告
-            isShow:true
+            isShow:true,
+            pic_url:'../src/rentalList/xin_n.png',
         },
         methods:{
             getData(){
@@ -16,6 +17,16 @@ var vm = new Vue({
             },
             close(){
                 this.isShow =false
+            },
+            jump(){
+                window.location='../html/secondHandDetails.html'
+            },
+            pic(){
+                if(this.pic_url == '../src/rentalList/xin_n.png'){
+                    this.pic_url = '../src/rentalList/xin_y.png'
+                }else{
+                    this.pic_url = '../src/rentalList/xin_n.png'
+                }
             }
         },
         // 挂载前调用axios获取数据
@@ -24,4 +35,9 @@ var vm = new Vue({
         },
 })
 
-
+function index(){
+    window.location = '../html/index.html'
+}
+function log(){
+    window.location = '../html/login.html'
+}

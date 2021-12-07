@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>租房详情页</title>
-    
+
     <!-- 头部公用样式 -->
     <link rel="stylesheet" href="../css/public.css">
     <!-- 二手房列表所有样式 -->
     <link rel="stylesheet" href="../css/secondHandDetails.css">
-     <!-- 二手房列表所有样式 -->
-     <link rel="stylesheet" href="../css/rentalDetails.css">
+    <!-- 二手房列表所有样式 -->
+    <link rel="stylesheet" href="../css/rentalDetails.css">
+    <!-- 引入swiper -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
 
     <!-- 调节字体大小js -->
     <script src="../js/mine.js"></script>
@@ -20,135 +22,160 @@
     <script src="../js/vue.js"></script>
     <!-- 引入axios.js -->
     <script src="../js/axios.min.js"></script>
-    
+    <!-- 引入swiper -->
+    <script src="../js/swiper-bundle.min.js"></script>
+
 </head>
+
 <body>
     <div id="app">
         <!--todo 头部 -->
         <header>
             <h1>
-                <img src="../src/index/logo.jpg" alt="">
+                <img src="../src/index/logo.jpg" onclick="index()">
             </h1>
             <div>
-                <img src="../src/index/my.jpg" alt="">
+                <img src="../src/index/my.jpg" onclick="log()">
                 <img src="../src/index/xiazai.jpg" alt="">
             </div>
         </header>
-        <!-- 首页大图 -->
-        <div class="swip share">
-            <span>分享</span>
-        </div>
-        <!-- 大标题 -->
-        <div class="pic_title gz">
-            <h3>天鹅湾小区精装两居，满五唯一，业主换房急售</h3>
-            <p><a>关注</a></p>
-        </div>
-
-        <!-- 大标题下的租金 房型 面积 -->
-        <ul class="little_">
-            <li>
-                <p>租金</p>
-                <span>2300元/月</span>
-            </li>
-            <li>
-                <p>房型</p>
-                <span>2室1厅</span>
-            </li>
-            <li>
-                <p>面积</p>
-                <span>204平米</span>
-            </li>
-        </ul>
-
-        <!-- 房源详细信息列表 -->
-        <ul class="lis rental_lis">
-            <li>
-                <p>楼层：高层/17层</p>
-                <p>朝向：南北</p>
-            </li>
-            <li>
-                <p>装修：精装</p>
-                <p>供暖：集体供暖</p>
-            </li>
-            <li>
-                <p>年代：2007年</p>
-                <p>楼型：板楼</p>
-            </li>
-
-        </ul>
-
-        <!-- 经纪人房评 -->
-        <div class="special m">
-            <h2>经纪人房评</h2>
-            <span>地理位置：晶都国际处于酒仙桥中心地带，毗邻 北京三大商圈，紧邻丽都商圈，隔四环与望京商 圈相望，西南紧挨燕莎商圈，地理位置优越。周 边配套：颐堤港商业中心，兆维大厦...</span>
-        </div>
-
-
-        <!-- 房源特色 -->
-        <div class="special m">
-            <h2>看房客户记录</h2>
-            <span>近一个月新增0位看房客户，共50位</span>
-        </div>
-
-
-
-        <!-- 位置地图 -->
-        <div class="special m map">
-            <h2>位置及周边</h2>
-            <div class="in">
-                <h3>地址: [黄村]时代龙和</h3>
-                <img src="../src/SecondHandList/map.png" alt="">
+        <!-- todo swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div>
             </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
         </div>
+            <!-- 大标题 -->
+            <div class="pic_title gz">
+                <h3>天鹅湾小区精装两居，满五唯一，业主换房急售</h3>
+                <p @click=pic()>
+                    <img :src="pic_url" >
+                    <a>关注</a>
+                </p>
+            </div>
 
-        <!-- 小区成交历史 -->
-        <div class="special m">
-            <h2>小区成交历史</h2>
-            <span>3 室 2 厅，146 平米，
-                <a href="">5000 元</a><br>
-                签约日期：2015-02-26
-            </span>
-        </div>
-
-        <!-- 联系经纪人 -->
-        <div class="call">
-            <img src="../src/rentalList/man.png" alt="">
-            <p>
-                张三<br>
-                4001581855转0008
-            </p>
-            <a href="#" id="call">致电</a>
-            <a href="#" id="msg">短信</a>
-        </div>
-
-
-        <!--todo 尾部 -->
-        <footer>
-            <h2>北京找房无忧 > 首页</h2>
-            <ul>
+            <!-- 大标题下的租金 房型 面积 -->
+            <ul class="little_">
                 <li>
-                    <img src="../src/index/apple.png" alt="">
-                    <div>
-                        <p>iPhone</p>
-                        <p>客户端</p>
-                    </div>
+                    <p>租金</p>
+                    <span>2300元/月</span>
                 </li>
                 <li>
-                    <img src="../src/index/android.png" alt="">
-                    <div>
-                        <p>Android</p>
-                        <p>客户端</p>
-                    </div>
+                    <p>房型</p>
+                    <span>2室1厅</span>
+                </li>
+                <li>
+                    <p>面积</p>
+                    <span>204平米</span>
                 </li>
             </ul>
-            <div>
-                <p>北京找房无忧房地产经纪公司</p>
-                <p>网络经营许可证京ICP备20160812号</p>
+
+            <!-- 房源详细信息列表 -->
+            <ul class="lis rental_lis">
+                <li>
+                    <p>楼层：高层/17层</p>
+                    <p>朝向：南北</p>
+                </li>
+                <li>
+                    <p>装修：精装</p>
+                    <p>供暖：集体供暖</p>
+                </li>
+                <li>
+                    <p>年代：2007年</p>
+                    <p>楼型：板楼</p>
+                </li>
+
+            </ul>
+
+            <!-- 经纪人房评 -->
+            <div class="special m">
+                <h2>经纪人房评</h2>
+                <span>地理位置：晶都国际处于酒仙桥中心地带，毗邻 北京三大商圈，紧邻丽都商圈，隔四环与望京商 圈相望，西南紧挨燕莎商圈，地理位置优越。周 边配套：颐堤港商业中心，兆维大厦...</span>
             </div>
-        </footer>
-    </div>
+
+
+            <!-- 房源特色 -->
+            <div class="special m">
+                <h2>看房客户记录</h2>
+                <span>近一个月新增0位看房客户，共50位</span>
+            </div>
+
+
+
+            <!-- 位置地图 -->
+            <div class="special m map">
+                <h2>位置及周边</h2>
+                <div class="in">
+                    <h3>地址: [黄村]时代龙和</h3>
+                    <img src="../src/SecondHandList/map.png" alt="">
+                </div>
+            </div>
+
+            <!-- 小区成交历史 -->
+            <div class="special m">
+                <h2>小区成交历史</h2>
+                <span>3 室 2 厅，146 平米，
+                    <a href="">5000 元</a><br>
+                    签约日期：2015-02-26
+                </span>
+            </div>
+
+            <!-- 联系经纪人 -->
+            <div class="call">
+                <img src="../src/rentalList/man.png" alt="">
+                <p>
+                    张三<br>
+                    4001581855转0008
+                </p>
+                <a href="#" id="call">致电</a>
+                <a href="#" id="msg">短信</a>
+            </div>
+
+
+            <!--todo 尾部 -->
+            <footer>
+                <h2>北京找房无忧 > 租房详情页</h2>
+                <ul>
+                    <li>
+                        <img src="../src/index/apple.png" alt="">
+                        <div>
+                            <p>iPhone</p>
+                            <p>客户端</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../src/index/android.png" alt="">
+                        <div>
+                            <p>Android</p>
+                            <p>客户端</p>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <p>北京找房无忧房地产经纪公司</p>
+                    <p>网络经营许可证京ICP备20160812号</p>
+                </div>
+            </footer>
+        </div>
 </body>
 <!-- 引入获取数据的js -->
 <script src="../js/index.js"></script>
-
+<!-- swiper的js -->
+<script src="../js/swiper.js"></script>
 </html>

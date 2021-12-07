@@ -24,10 +24,10 @@
     <!--todo 头部 -->
     <header>
         <h1>
-            <img src="../src/index/logo.jpg" alt="">
+            <img src="../src/index/logo.jpg" onclick="index()" >
         </h1>
         <div>
-            <img src="../src/index/my.jpg" alt="">
+            <img src="../src/index/my.jpg" onclick="log()" >
             <img src="../src/index/xiazai.jpg" alt="">
         </div>
     </header>
@@ -39,7 +39,7 @@
     <!-- todo 二手房 租房列表 -->
     <ul class="home">
         <li>
-            <a href="#">
+            <a href="../html/secondHandList.html">
                 <img src="../src/index/index_03.png" alt="">
                 <span>二手房</span>
             </a>
@@ -51,7 +51,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="../html/rentalList.html">
                 <img src="../src/index/index_07.png" alt="">
                 <span>租房</span>
             </a>
@@ -75,7 +75,7 @@
         </div>
         <ul>
             <!-- todo 只截取数据的前三条0,1,2  (0,3)从0开始不包括3 -->
-            <li v-for="(item, index) of lis.slice(0,3)">
+            <li v-for="(item, index) of lis.slice(0,3)" @click='jump'>
                 <img :src="item.imgurl" alt="">
                 <div>
                     <h3>{{item.title}}</h3>
@@ -113,7 +113,7 @@
     </ul>
     <ul class="link">
         <li>
-            <span>北京二手房</span>
+            <span><a href="..//html/secondHandList.html">北京二手房</a></span>
             <span>北京二手房价</span>
             <span>海淀日租房</span>
             <span>朝阳新房</span>

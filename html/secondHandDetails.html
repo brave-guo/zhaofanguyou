@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../css/public.css">
     <!-- 二手房列表所有样式 -->
     <link rel="stylesheet" href="../css/secondHandDetails.css">
+    <!-- 引入swiper -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
 
     <!-- 调节字体大小js -->
     <script src="../js/mine.js"></script>
@@ -17,6 +20,9 @@
     <script src="../js/vue.js"></script>
     <!-- 引入axios.js -->
     <script src="../js/axios.min.js"></script>
+    <!-- 引入swiper -->
+    <script src="../js/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -24,16 +30,35 @@
         <!--todo 头部 -->
         <header>
             <h1>
-                <img src="../src/index/logo.jpg" alt="">
+                <img src="../src/index/logo.jpg" onclick="index()" >
             </h1>
             <div>
-                <img src="../src/index/my.jpg" alt="">
+                <img src="../src/index/my.jpg" onclick="log()" >
                 <img src="../src/index/xiazai.jpg" alt="">
             </div>
         </header>
-        <!-- 首页大图 -->
-        <div class="swip">
-            <span>1/5</span>
+        
+        <!-- todo swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div> 
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div> 
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div> 
+                <div class="swiper-slide">
+                    <img src="../src/SecondHandList/img.png" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
         </div>
         <!-- 大标题 -->
         <div class=pic_title>
@@ -174,7 +199,7 @@
 
         <!--todo 尾部 -->
         <footer>
-            <h2>北京找房无忧 > 首页</h2>
+            <h2>北京找房无忧 > 二手房详情页</h2>
             <ul>
                 <li>
                     <img src="../src/index/apple.png" alt="">
@@ -200,5 +225,7 @@
 </body>
 <!-- 引入获取数据的js -->
 <script src="../js/index.js"></script>
+<!-- swiper的js -->
+<script src="../js/swiper.js"></script>
 
 </html>

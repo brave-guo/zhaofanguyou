@@ -170,7 +170,9 @@
     padding: 0.2rem 0;
     font-size: 0.14rem;
 }
-
+.link a{
+    color: rgb(122, 119, 119);
+}
 /* todo 下载透明层 */
 .fix{
     width: 100%;
