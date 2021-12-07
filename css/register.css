@@ -77,6 +77,9 @@ article .loginPy{
 article .loginPw{
     display: none;
 }
+article .loginPw2{
+    display: none;
+}
 article button{
     width: 90%;
     height: 0.5rem;

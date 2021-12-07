@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/attention.css">
+    <link rel="stylesheet" href="../css/secondHandList.css">
+    <script src="../js/mine.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/axios.min.js"></script>
+</head>
+
+<body>
+    <!--todo 头部 -->
+    <header>
+        <h1>
+            <img src="../src/index/logo.jpg" alt="">
+        </h1>
+        <div>
+            <img src="../src/index/my.jpg" alt="">
+            <img src="../src/index/xiazai.jpg" alt="">
+        </div>
+    </header>
+    <div class="login-path">
+        <p>
+            <a href="" class="login-home">首页</a> >
+            <a href="">我的</a> >
+            <a href="">我关注的小区</a>
+        </p>
+    </div>
+    <!-- todo 列表部分 -->
+    <ul id="app">
+        <!-- todo 只截取数据的前三条0,1,2,3  (0,4)从0开始不包括4 -->
+        <li v-for="(item, index) of lis.slice(0,4)">
+            <img :src="item.imgurl" alt="">
+            <div>
+                <h3>{{item.title}}</h3>
+                <p class="acreage">
+                    <span>{{item.style}}</span>
+                </p>
+                <p class="hot_address">
+                    <span>{{item.time}}</span>
+                    <span>{{item.unit_price}}</span>
+                </p>
+                <p class="hot_spe">
+                    <span>{{item.address}}</span>
+                </p>
+            </div>
+        </li>
+    </ul>
+       <!--todo 尾部 -->
+       <footer>
+        <h2>北京找房无忧 > 首页</h2>
+        <ul>
+            <li>
+                <img src="../src/index/apple.png" alt="">
+                <div>
+                    <p>iPhone</p>
+                    <p>客户端</p>
+                </div>
+            </li>
+            <li>
+                <img src="../src/index/android.png" alt="">
+                <div>
+                    <p>Android</p>
+                    <p>客户端</p>
+                </div>
+            </li>
+        </ul>
+        <div>
+            <p>北京找房无忧房地产经纪公司</p>
+            <p>网络经营许可证京ICP备20160812号</p>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
+<script src="../js/attention.js"></script>
