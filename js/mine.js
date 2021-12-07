@@ -9,4 +9,7 @@ function setRem() {
     html_.style.fontSize = (clientWidth/ui_w)*100 +'px';
 }
 // window.onresize 浏览器被重置大小执行事件
-window.onresize = setRem;
+function plot(){
+    window.location='../html/attention.html';
+}
+

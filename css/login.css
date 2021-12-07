@@ -66,7 +66,9 @@ article .login-error{
     color: #808080;
     position: relative;
     overflow: hidden;
+    text-align: left;
     padding-left: .2rem;
+    /* padding-left: 0rem; */
     margin-left: .2rem;
     line-height: 0.3rem;
 }
@@ -82,13 +84,14 @@ article .login-error img{
 article .loginPw{
     display: none;
 }
-article button{
+article #ok{
     width: 90%;
-    height: 0.5rem;
+    line-height: 0.5rem;
     margin: .2rem auto;
     font-size: .2rem;
     color: white;
     border: none;
+    display: inline-block;
     background-color: #FF8A00;
 }
 article .login-box1{
@@ -153,13 +156,15 @@ article .login-box1 .login-forget{
 .login-code2 .loginPy{
     display: none;
 }
-.login-code2 button{
+.login-code2 #ok2{
     width: 90%;
     height: 0.5rem;
+    line-height: 0.5rem;
     margin: .2rem auto;
     font-size: .2rem;
     color: white;
     border: none;
+    display: inline-block;
     background-color: #FF8A00;
 }
 .login-code2 .login-box1{
