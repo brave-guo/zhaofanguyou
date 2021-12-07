@@ -8,6 +8,9 @@ html{
 body{
     font-size: .15rem;
 }
+body a{
+    color: black;
+}
 header{
     width: 100%;
     text-align: center;

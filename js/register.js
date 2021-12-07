@@ -1,9 +1,11 @@
 var phone = document.getElementById('phone');
 var code = document.getElementById('code');
 var pass = document.getElementById('pass');
+var pass2 = document.getElementById('pass2');
 var loginP = document.getElementsByClassName('loginP')[0];
 var loginPy = document.getElementsByClassName('loginPy')[0];
 var loginPw = document.getElementsByClassName('loginPw')[0];
+var loginPw2 = document.getElementsByClassName('loginPw2')[0];
 var loginCode = document.getElementsByClassName('login-code')[0];
 phone.onblur = function () {
     var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
@@ -21,6 +23,14 @@ pass.onblur = function () {
         loginPw.style.display = 'block';
     } else {
         loginPw.style.display = 'none';
+    }
+}
+pass2.onblur = function () {
+    // var reg = /^[a-z0-9]+$/i;
+    if (pass2.value!=pass.value) {
+        loginPw2.style.display = 'block';
+    } else {
+        loginPw2.style.display = 'none';
     }
 }
 //验证码
