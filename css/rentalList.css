@@ -48,25 +48,148 @@
     height: 0.5rem;
     background-color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     color: rgb(112, 111, 111);
+    position: relative;
 }
 .title h3{
     font-size: 0.18rem;
 }
 .title>li{
+    width: 0.6rem;
     position: relative;
+    text-align: center;
+}
+.orange{
+    color: rgb(255,138,0);
+}
+.title .up{
+    border-bottom: 0.04rem solid rgb(255,138,0);
+    border-right: 0.04rem solid transparent;
+    border-top: 0.04rem solid transparent;
+    border-left: 0.04rem solid transparent;
+    top: 0.01rem;
 }
 .title span{
-    border-top: 5px solid #ccc;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
+    border-top: 0.04rem solid #ccc;
+    border-right: 0.04rem solid transparent;
+    border-bottom: 0.04rem solid transparent;
+    border-left: 0.04rem solid transparent;
     position: absolute;
-    top: 0.06rem;
-    right: -0.1rem;
+    top: 0.05rem;
+    right: 0rem;
 }
+
+/* todo 下拉列表框 */
+.out{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0.5rem;
+    display: flex;
+    flex-direction: column
+}
+.grey{
+    width: 100%;
+    background-color: rgba(77, 73, 73, 0.247);
+    flex: 1;
+}
+.select1,.select2,.select3,.select4{
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.select1 .left{
+    width: 0.9rem;
+    text-align: center;
+    color: rgb(105, 103, 103);
+    background-color: rgb(243, 240, 240);
+}
+.select1 h3{
+    font-size: 0.18rem;
+    margin: 0.05rem 0;
+}
+.select1 p{
+    color: rgb(105, 103, 103);
+    font-size: 0.12rem;
+    text-align: center;
+    margin-bottom: 0.15rem;
+    margin-right: 0.4rem;
+}
+.select2,.select3{
+    flex-direction: column;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+}
+.select2 p,.select3 p{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    color: rgb(105, 103, 103);
+    border-bottom: 1px solid rgb(235, 233, 233);
+}
+.select3,.select4{
+    padding-bottom: 0.1rem;
+}
+.select3 p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select3 p a,.select4 p{
+    font-size: 0.12rem;
+    color: rgb(105, 103, 103);
+}
+.select3 p span{
+    width: 0.1rem;
+    height: 0.1rem;
+    border:  1px solid rgb(255,138,0);
+    margin-right: 0.2rem;
+}
+.select3 button,.select4 button{
+    height: 0.4rem;
+    color: white;
+    font-size: 0.13rem;
+    border: none;
+    background-color:rgb(255,138,0) ;
+}
+.select4{
+    flex-direction: column;
+    padding: 0 0.3rem 0.1rem;
+}
+.select4 .title_s{
+    width: 100%;
+    padding-bottom: 0.2rem;
+    margin-top: 0.1rem;
+    border-bottom: 1px solid rgb(235, 233, 233);
+    /* display: flex; */
+}
+.select4 .title_s div{
+    width: 100% ;
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+.select4 .title_s p{
+    width: 0.5rem;
+    font-size: 0.1rem;
+    margin: 0.1rem 0.18rem 0 0;
+    padding: 0.03rem 0.01rem 0.045rem;
+    text-align: center;
+    color: rgb(92, 90, 90);
+    border: 1px solid rgb(163, 162, 162);
+}
+.select4>p{
+    width: 100%;
+    text-align: center;
+    padding: 0.1rem 0;
+}
+
+
+
 
 
 /* todo 热门房源ul部分 */
