@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src=""></script>
+</head>
+
+<body>
+     <!--todo 头部 -->
+     <header>
+        <h1>
+            <img src="../src/index/logo.jpg" alt="">
+        </h1>
+        <div>
+            <img src="../src/index/my.jpg" alt="">
+            <img src="../src/index/xiazai.jpg" alt="">
+        </div>
+    </header>
+    <div class="login-path">
+        <p>
+            <a href="" class="login-home">首页</a> >
+            <a href="">找回密码</a>
+            <!--  ><a href="">注册</a> -->
+        </p>
+    </div>
+    <article>
+        <p class="login-error loginP">
+            <img src="../src/my/错误 (3).png" alt="">
+            手机号码错误，请重新输入
+        </p>
+        <span class="login-code">获取验证码</span>
+        <input id="phone" type="text" placeholder="请输入手机号码">
+        <p class="login-error loginPy">
+            <img src="../src/my/错误 (3).png" alt="">
+            验证码错误，请重新输入
+        </p>
+        <input id="code" type="text" placeholder="请输入短信中的验证码">
+        <p class="login-error loginPw">
+            <img src="../src/my/错误 (3).png" alt="">
+            密码错误，请重新输入
+        </p>
+        <input id="pass" type="password" placeholder="请输入新密码">
+        <p class="login-error loginPw">
+            <img src="../src/my/错误 (3).png" alt="">
+            两次密码不一样，请重新输入
+        </p>
+        <input id="pass" type="password" placeholder="请输入确认密码">
+        <button id="register">提交</button>
+    </article>
+</body>
+
+</html>
+<script src="../js/register.js"></script>
