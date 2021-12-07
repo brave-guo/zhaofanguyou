@@ -26,5 +26,5 @@ function index(){
     window.location = '../html/index.html'
 }
 function log(){
-    window.location = '../html/login.html'
+    window.location = '../html/mine.html'
 }
