@@ -11,3 +11,7 @@ function setRem() {
 // window.onresize 浏览器被重置大小执行事件
 window.onresize = setRem;
 window.onload = setRem;
+function plot(){
+    window.location='../html/attention.html';
+}
+

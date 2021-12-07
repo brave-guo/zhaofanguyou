@@ -1,4 +1,4 @@
-var phone = document.getElementById('phone');
+var phone = document.getElementsByClassName('phone')[0];
 var code = document.getElementById('code');
 var pass = document.getElementById('pass');
 var pass2 = document.getElementById('pass2');
