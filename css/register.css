@@ -39,6 +39,7 @@ body a{
 .login-retr input{
     height: 0.5rem;
     border: none;
+    font-size: .14rem;
     outline-style: none;
     padding-left: .2rem;
     border-bottom: .015rem solid #ccc;

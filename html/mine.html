@@ -27,8 +27,8 @@
     </header>
     <div class="login-path">
         <p>
-            <a href="" class="login-home">首页</a> >
-            <a href="">我的</a>
+            <a href="../html/index.html" class="login-home">首页</a> >
+            <a href="#">我的</a>
             <!-- <a href="">登录</a> -->
         </p>
     </div>
@@ -174,11 +174,17 @@
 </html>
 <script src="../js/mine.js"></script>
 <script>
-    window.onload = function () {
-    if (localStorage.getItem('phone') !=null) {
-        window.location='../html/mine befor.html';
+    function index(){
+    window.location = '../html/index.html'
+}
+function log(){
+    if(localStorage.getItem('phone') ==null){
+        window.location = '../html/mine.html'
+    }else{
+        window.location = '../html/mine befor.html'
     }
 }
+
 </script>
 <!-- <script src="../js/m b.js"></script> -->
 <!-- <script src="../js/login.js"></script> -->
