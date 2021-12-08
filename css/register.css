@@ -27,22 +27,23 @@ body a{
 .login-path .login-home{
     font-weight: bold;
 }
-article{
+.login-retr{
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    /* display: none; */
     /* background-color: white; */
 }
-article input{
+.login-retr input{
     height: 0.5rem;
     border: none;
     outline-style: none;
     padding-left: .2rem;
     border-bottom: .015rem solid #ccc;
 }
-article .login-code{
+.login-retr .login-code{
     display: inline-block;
     width: .8rem;
     color: #808080;
@@ -54,7 +55,7 @@ article .login-code{
     right: .2rem;
     border: .01rem solid #ccc;
 }
-article .login-error{
+.login-retr .login-error{
     font-size: .14rem;
     color: #808080;
     position: relative;
@@ -62,25 +63,25 @@ article .login-error{
     padding-left: .2rem;
     margin-left: .2rem;
     line-height: 0.3rem;
-}article .login-error img{
+}.login-retr .login-error img{
     width: 0.2rem;
     position: absolute;
     top: .05rem;
     left: 0;
 }
-article .loginP{
+.login-retr .loginP{
     display: none;
 }
-article .loginPy{
+.login-retr .loginPy{
     display: none;
 }
-article .loginPw{
+.login-retr .loginPw{
     display: none;
 }
-article .loginPw2{
+.login-retr .loginPw2{
     display: none;
 }
-article button{
+.login-retr button{
     width: 90%;
     height: 0.5rem;
     margin: .2rem auto;

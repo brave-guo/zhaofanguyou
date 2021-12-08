@@ -1,54 +1,81 @@
 var lic = document.getElementsByClassName('login-cl');
-var article = document.getElementsByTagName('article')[0];
+var mine_login = document.getElementsByClassName('mine-login')[0];
 var login_code2 = document.getElementsByClassName('login-code2')[0];
-// console.log(lic);
-lic[0].onclick = function () {
+var login = document.getElementsByClassName('login')[0];
+var button = document.getElementsByClassName('button')[0];
+
+function lic1() {
     // border-bottom: .04rem solid #FF8A00;
     // border-bottom: .015rem solid #ccc;
     // font-weight: bold;
-    this.style.borderBottom = '.04rem solid #FF8A00';
-    this.style.fontWeight = '600';
+    lic[0].style.borderBottom = '.04rem solid #FF8A00';
+    lic[0].style.fontWeight = '600';
     lic[1].style.borderBottom = '.04rem solid #ccc';
     lic[1].style.fontWeight = '500';
 
-    article.style.display = 'block';
+    mine_login.style.display = 'block';
     login_code2.style.display = 'none';
 }
-lic[1].onclick = function () {
+// lic[1].onclick = 
+function lic2() {
     // border-bottom: .04rem solid #FF8A00;
     // border-bottom: .015rem solid #ccc;
-    this.style.borderBottom = '.04rem solid #FF8A00';
-    this.style.fontWeight = '600';
+    lic[1].style.borderBottom = '.04rem solid #FF8A00';
+    lic[1].style.fontWeight = '600';
     lic[0].style.borderBottom = '.04rem solid #ccc';
     lic[0].style.fontWeight = '500';
 
     login_code2.style.display = 'block';
-    article.style.display = 'none';
+    mine_login.style.display = 'none';
 
 }
 
-var ok = document.getElementById('ok');
+// var mine_box = document.getElementsByClassName('mine-box')[0];
+// var login_box = document.getElementsByClassName('login-box')[0];
 
-// console.log(phoneb);
-// console.log(passb);
-
-ok.onclick = function () {
+function ok() {
+    var ok = document.getElementById('ok');
     var phone = document.getElementsByClassName('phone')[0].value;
     var pass = document.getElementById('pass').value;
-    var loginP=document.getElementsByClassName('loginP')[0];
-    // console.log(phone);
-    // console.log(pass);
-    console.log(loginP);
-    var phoneb = localStorage.getItem('phone');
-    var passb = localStorage.getItem('pass');
-    if(phone==phoneb&&pass==passb){
-        // <a id="ok">立即登录</a>
+    // var loginP = document.getElementsByClassName('loginP')[0];
+    localStorage.setItem('phone', phone);
+    localStorage.setItem('pass', pass);
+    if(localStorage.getItem('phone')!=''){
+        // window.localStorage = '../html/index.html';
         ok.href='../html/mine befor.html';
-        loginP.style.display='none';
-    }else{
-        loginP.style.display='block';
     }
+    
+
+    // if (phone == phoneb && pass == passb) {
+    //     // <a id="ok">立即登录</a>
+    //     ok.href='../html/mine befor.html';
+    //     // ok.href = '../html/mine.html';
+    //     // login_box.style.display = 'none';
+    //     // mine_box.style.display = 'block';
+    //     loginP.style.display = 'none';
+    //     login.innerHTML = phone;
+    // } else {
+    //     loginP.style.display = 'block';
+    // }
+    // window.localStorage='../html/mine.html';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // var phone=document.getElementById('phone'); 
 // var pass=document.getElementById('pass'); 

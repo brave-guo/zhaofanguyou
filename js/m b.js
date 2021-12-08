@@ -22,9 +22,14 @@ exit.onclick=function(){
 
    // 点击取消时 使用dom 删除mk
    var span1=document.getElementsByClassName('span1')[0];
+   var span2=document.getElementsByClassName('span2')[0];
    span1.onclick=function(){
     //   body_.removeChild(img_);
      body_.removeChild(mk);
 
-} 
+   } 
+   span2.onclick=function(){
+     localStorage.removeItem('phone');
+     localStorage.removeItem('pass');
+   }
 }

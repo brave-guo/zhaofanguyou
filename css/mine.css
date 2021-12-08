@@ -8,19 +8,35 @@ html{
 body{
     font-size: .15rem;
 }
-body a{
+/* body a{
     color: black;
+} */
+.login-path{
+    width: 100%;
+    height: 0.4rem;
+    background-color: white;
+    border-bottom: .02rem solid #ccc;
 }
-header{
+.login-path p{
+    line-height: 0.4rem;
+    text-indent: .2rem;
+}
+.login-path a{
+    text-decoration: none;
+}
+.login-path .login-home{
+    font-weight: bold;
+}
+.header{
     width: 100%;
     text-align: center;
     position: relative;
 }
-header .bg{
+.header .bg{
     width: 100%;
     vertical-align: top;
 }
-header .mine-my{
+/* .header .mine-my{
     list-style: none;
     position: absolute;
     top: 0;
@@ -28,28 +44,31 @@ header .mine-my{
     display: flex;
     justify-content: start;
 }
-header .mine-my li{
+.header .mine-my li{
     margin:.1rem;
 }
-header .mine-my li a{
+.header .mine-my li a{
     text-decoration: none;
     color: white;
 }
-header .mine-my li img{
+.header .mine-my li img{
     width: 0.17rem;
-}
-header div{
+} */
+.header div{
+    /* width: 100%; */
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-30%);
     display: flex;
     flex-direction: column;
 }
-header div img{
+.header div img{
     width: .7rem;
+    margin-left: 50%;
+    transform: translate(-50%);
 }
-header div .login{
+.header div .login{
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #ffffff;
@@ -70,9 +89,9 @@ article .mine-at li{
     padding-left: .25rem;
     border-bottom: 1px solid #ccc;
 }
-article .mine-at a{
+/* article .mine-at a{
     text-decoration: none;
-}
+} */
 article .mine-at .mine-icon{
     width: 0.2rem;
     position: absolute;
@@ -87,4 +106,19 @@ article .mine-at .mine-right{
     width: .08rem;
     float: right;
     margin: .18rem .08rem 0 0;
+}
+.button{
+    width: 90%;
+    /* height: 0.5rem; */
+    margin: .2rem auto;
+    display: none;
+}
+.button button{
+    width: 100%;
+    height: 0.5rem;
+    color: #FF8A00;
+    background-color: white;
+    border: none;
+    border: .01rem solid #ccc;
+    /* margin: .2rem auto; */
 }

@@ -15,10 +15,10 @@
      <!--todo 头部 -->
      <header>
         <h1>
-            <img src="../src/index/logo.jpg" alt="">
+            <img src="../src/index/logo.jpg" onclick="index()">
         </h1>
         <div>
-            <img src="../src/index/my.jpg" alt="">
+            <img src="../src/index/my.jpg" onclick="log()">
             <img src="../src/index/xiazai.jpg" alt="">
         </div>
     </header>
@@ -29,7 +29,7 @@
             <a href="">注册</a>
         </p>
     </div>
-    <article>
+    <div class="login-retr">
         <p class="login-error loginP">
             <img src="../src/my/错误 (3).png" alt="">
             手机号码错误，请重新输入
@@ -47,9 +47,10 @@
         </p>
         <input id="pass" type="password" placeholder="请输入密码">
         <button id="register">立即注册</button>
-    </article>
+    </div>
 </body>
 
 </html>
 <script src="../js/register.js"></script>
 <script src="../js/mine.js"></script>
+<script src="../js/index.js"></script>

@@ -15,3 +15,11 @@ function plot(){
     window.location='../html/attention.html';
 }
 
+function index(){
+    window.location = '../html/index.html'
+}
+function log(){
+    window.location = '../html/mine.html'
+}
+
+
