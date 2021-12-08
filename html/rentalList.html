@@ -22,47 +22,156 @@
 <body>
     <div id="app">
         <!--todo 头部 -->
-        <header>
+        <header v-show="header_show">
             <h1>
-                <img src="../src/index/logo.jpg" onclick="index()" >
+                <img src="../src/index/logo.jpg" onclick="index()">
             </h1>
             <div>
-                <img src="../src/index/my.jpg" onclick="log()" >
+                <img src="../src/index/my.jpg" onclick="log()">
                 <img src="../src/index/xiazai.jpg" alt="">
             </div>
         </header>
         <!--todo head头部 -->
-        <p class="first"> 
+        <p class="first" v-show="header_show">
             <span onclick="index()">首页</span>
             <span>> 北京租房</span>
         </p>
         <!--todo 搜索框 -->
-        <div class="search">
+        <div class="search" v-show="header_show">
             <input type="text">
             <a href="#">
                 <img src="../src/index/seach.jpg" alt="">
             </a>
         </div>
         <!--todo title部分 -->
-        <ul class="title">
-            <li>
+        <ul class="title" id="tit" :style="{'position': (pos_==true ? 'fixed':'relative')}">
+            <li @click=fn1() :class="{orange:select1}">
                 <h3>区域</h3>
-                <span></span>
+                <span :class="{up:select1}"></span>
             </li>
-            <li>
+            <li @click=fn2() :class="{orange:select2}">
                 <h3>价格</h3>
-                <span></span>
+                <span :class="{up:select2}"></span>
             </li>
-            <li>
+            <li @click=fn3() :class="{orange:select3}">
                 <h3>房型</h3>
-                <span></span>
+                <span :class="{up:select3}"></span>
             </li>
-            <li>
+            <li @click=fn4() :class="{orange:select4}">
                 <h3>更多</h3>
-                <span></span>
+                <span :class="{up:select4}"></span>
             </li>
         </ul>
+        <!-- todo 下拉列表框 -->
+        <div class="out" v-show='out_show'>
+            <div class="select1" v-show="select1">
+                <div class="left">
+                    <h3  :class="{orange:select1}">区域</h3>
+                    <h3>地铁</h3>
+                </div>
+                <div>
+                    <p>附近</p>
+                    <p>不限</p>
+                    <p>朝阳</p>
+                    <p>海淀</p>
+                    <p>昌平</p>
+                    <p>丰台</p>
+                    <p>石景山</p>
+                </div>
+                <div>
+                    <p>不限</p>
+                    <p>安贞</p>
+                    <p>奥林匹克公园</p>
+                    <p>百子湾</p>
+                    <p>北工大</p>
+                    <p>北苑</p>
+                    <p>CBD</p>
+                </div>
+            </div>
 
+            <div class="select2" v-show="select2">
+                <p>不限</p>
+                <p>100万以下</p>
+                <p>100万-150万</p>
+                <p>150万-200万</p>
+                <p>200万-250万</p>
+                <p>250万-300万</p>
+                <p>自定义价格</p>
+            </div>
+
+            <div class="select3"  v-show="select3">
+                <p>
+                    <a>不限</a>
+                    <span class="dui"></span>
+                </p>
+                <p>
+                    <a>1室</a>
+                    <span></span>
+                </p>
+                <p>
+                    <a>2室</a>
+                    <span></span>
+                </p>
+                <p>
+                    <a>3室</a>
+                    <span></span>
+                </p>
+                <p>
+                    <a>4室</a>
+                    <span></span>
+                </p>
+                <p>
+                    <a>5室</a>
+                    <span></span>
+                </p>
+                <button>确定</button>
+            </div>
+
+            <div class="select4" v-show="select4">
+                <div class="title_s">
+                    <h3>区域</h3>
+                    <div>
+                        <p>南</p>
+                        <p>南北</p>
+                        <p>东</p>
+                        <p>西</p>
+                        <p>北</p>
+                    </div>
+                </div>
+                <div class="title_s">
+                    <h3>面积（平方）</h3>
+                    <div>
+                        <p>50以下</p>
+                        <p>50-70</p>
+                        <p>70-90</p>
+                        <p>90-110</p>
+                        <p>110-130</p>
+                        <p>130-150</p>
+                        <p>150-200</p>
+                        <p>200以上</p>
+                    </div>
+                </div>
+                <div class="title_s">
+                    <h3>标签</h3>
+                    <div>
+                        <p>学区房</p>
+                        <p>地铁房</p>
+                        <p>不限购</p>
+                        <p>满两年</p>
+                        <p>满五唯一</p>
+                        <p>降价</p>
+                        <p>新上</p>
+                        <p>独家</p>
+                        <p>有钥匙</p>
+                    </div>
+                </div>
+                <p>清空条件</p>
+                <button>确定</button>
+            </div>
+
+            <div class="grey" v-show="grey_show" @click=none()>
+            </div>
+        </div>
         <!-- todo 列表部分 -->
         <ul id="esf">
             <!-- todo 只截取数据的前三条0,1,2  (0,3)从0开始不包括3 -->
@@ -87,32 +196,32 @@
         </ul>
 
         <!--todo 尾部 -->
-    <footer>
-        <h2>北京找房无忧 > 租房列表页</h2>
-        <ul>
-            <li>
-                <img src="../src/index/apple.png" alt="">
-                <div>
-                    <p>iPhone</p>
-                    <p>客户端</p>
-                </div>
-            </li>
-            <li>
-                <img src="../src/index/android.png" alt="">
-                <div>
-                    <p>Android</p>
-                    <p>客户端</p>
-                </div>
-            </li>
-        </ul>
-        <div>
-            <p>北京找房无忧房地产经纪公司</p>
-            <p>网络经营许可证京ICP备20160812号</p>
-        </div>
-    </footer>
+        <footer>
+            <h2>北京找房无忧 > 租房列表页</h2>
+            <ul>
+                <li>
+                    <img src="../src/index/apple.png" alt="">
+                    <div>
+                        <p>iPhone</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="../src/index/android.png" alt="">
+                    <div>
+                        <p>Android</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <p>北京找房无忧房地产经纪公司</p>
+                <p>网络经营许可证京ICP备20160812号</p>
+            </div>
+        </footer>
     </div>
 </body>
 <!-- 引入获取数据的js -->
 <script src="../js/rentalList.js"></script>
-
+<script src="../js/swiper.js"></script>
 </html>
