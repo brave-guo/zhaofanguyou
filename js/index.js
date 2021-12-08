@@ -38,5 +38,9 @@ function index(){
     window.location = '../html/index.html'
 }
 function log(){
-    window.location = '../html/mine.html'
+    if(localStorage.getItem('phone') ==null){
+        window.location = '../html/mine.html'
+    }else{
+        window.location = '../html/mine befor.html'
+    }
 }
