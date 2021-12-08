@@ -31,5 +31,6 @@ exit.onclick=function(){
    span2.onclick=function(){
      localStorage.removeItem('phone');
      localStorage.removeItem('pass');
+     window.location='../html/mine.html';
    }
 }
