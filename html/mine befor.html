@@ -49,7 +49,7 @@
             <img src="../src/my/urse2.png" alt="">
             <!-- <a class="login" href="">登录</a> -->
             <!-- <p class="login">欢迎您，15836216643</p> -->
-            <p class="login">15836216643</p>
+            <p class="login"></p>
         </div>
     </div>
     <article>
@@ -62,7 +62,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="../html/attention.html">
                     <img class="mine-icon" src="../src/my/icon2.png" alt="">
                     <p>我关注的小区</p>
                     <img class="mine-right" src="../src/my/right.png" alt="">
@@ -93,3 +93,7 @@
 </html>
 <script src="../js/mine.js"></script>
 <script src="../js/m b.js"></script>
+<script>
+    var login=document.getElementsByClassName('login')[0];
+    login.innerHTML=localStorage.phone;
+</script>

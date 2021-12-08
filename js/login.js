@@ -59,6 +59,27 @@ function ok() {
     // }
     // window.localStorage='../html/mine.html';
 }
+function logincode(){
+    alert(3553);
+}
+
+function ok2(){
+    var phone=document.getElementsByClassName('phone')[0];
+    var code=document.getElementById('code').value;
+    var loginP=document.getElementsByClassName('loginP')[0];
+    var loginPy=document.getElementsByClassName('loginPy')[0];
+    
+    if(!phone==localStorage.getItem('phone')){
+        loginP.style.display='block';
+    }else if(code!=3553){
+        loginPy.style.display='block';
+    }else{
+        window.location='../html/mine befor.html';
+    }
+
+    
+}
+
 
 
 

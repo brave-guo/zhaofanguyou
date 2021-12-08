@@ -1,7 +1,7 @@
-var phone = document.getElementsByClassName('phone')[0];
+var phone =document.getElementById('phone');
+// console.log(phone);
 var code = document.getElementById('code');
 var pass = document.getElementById('pass');
-var pass2 = document.getElementById('pass2');
 var loginP = document.getElementsByClassName('loginP')[0];
 var loginPy = document.getElementsByClassName('loginPy')[0];
 var loginPw = document.getElementsByClassName('loginPw')[0];
@@ -25,14 +25,14 @@ pass.onblur = function () {
         loginPw.style.display = 'none';
     }
 }
-pass2.onblur = function () {
-    // var reg = /^[a-z0-9]+$/i;
-    if (pass2.value!=pass.value) {
-        loginPw2.style.display = 'block';
-    } else {
-        loginPw2.style.display = 'none';
-    }
-}
+// pass2.onblur = function () {
+//     // var reg = /^[a-z0-9]+$/i;
+//     if (pass2.value!=pass.value) {
+//         loginPw2.style.display = 'block';
+//     } else {
+//         loginPw2.style.display = 'none';
+//     }
+// }
 //验证码
 loginCode.onclick = function () {
     alert('3553');
@@ -53,7 +53,7 @@ code.onblur = function () {
 var register = document.getElementById('register');
 
 register.onclick = function () {
-    console.log(localStorage.getItem('phone'));
+    // console.log(localStorage.getItem('phone'));
     var getphone=localStorage.getItem('phone');
     
     var phone = document.getElementById('phone').value;
@@ -70,6 +70,7 @@ register.onclick = function () {
         localStorage.setItem('phone', phone);
         localStorage.setItem('pass', pass);
         alert('注册成功')
+        window.location='../html/login.html';
         // console.log(localStorage.getItem('phone'));
     }
 

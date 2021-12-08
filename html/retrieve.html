@@ -56,7 +56,7 @@
 </body>
 
 </html>
-<script src="../js/register.js"></script>
+<!-- <script src="../js/register.js"></script> -->
 <script src="../js/mine.js"></script>
 <script>
     function index(){
@@ -69,6 +69,35 @@ function log(){
         window.location = '../html/mine befor.html'
     }
 }
+var phone = document.getElementById('phone').value;
+// console.log(phone);
+var pass = document.getElementById('pass');
+var register = document.getElementById('register');
+var pass2 = document.getElementById('pass2');
+var phoneb=localStorage.getItem('phone');
+var loginP = document.getElementsByClassName('loginP')[0];
+var loginPw = document.getElementsByClassName('loginPw')[0];
+var loginPw2 = document.getElementsByClassName('loginPw2')[0];
+register.onclick = function () {
+    // var reg = /^[a-z0-9]+$/i;
+    console.log(phoneb!=phone);
+    if(!phoneb==phone){
+        loginP.style.display = 'none';
+    }
+    else{
+        loginP.style.display = 'block';
+    }
+     if (pass2.value!=pass.value) {
+        loginPw2.style.display = 'block';
+    } else {
+        loginPw2.style.display = 'none';
+        localStorage.removeItem('pass');
+        localStorage.setItem('pass',pass.value);
+        alert("修改密码成功");
+        window.location='../html/login.html';
+    }
+}
+
 
 </script>
 <!-- <script src="../js/index.js"></script> -->
